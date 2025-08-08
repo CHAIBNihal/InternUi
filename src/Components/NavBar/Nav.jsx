@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { menuList } from '../../Constants/Menu'
 import { Bell, LogOut, UserRound, Menu } from 'lucide-react'
 import SRM from "../../assets/Dashboard/SRM.png"
+
 const Nav = () => {
     const [activeTab, setActiveTab] = useState("Accueil")
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(true)
+    
     return (
         <div className='flex flex-wrap justify-between items-center  py-2'>
             {/* Logo ou Titre */}
@@ -30,19 +31,21 @@ const Nav = () => {
                 {/* Menu Principal */}
                 <div className='backdrop-blur-xl bg-neutral-200 z-50 lg:rounded-full flex flex-col lg:flex-row gap-1 items-center shadow px-2 py-1 w-full lg:w-auto'>
                     {menuList.map((item, key) => (
-                        <button
+                        <a
                             key={key}
+                            href={item.link}
                             onClick={() => {
                                 setActiveTab(item.text)
                                 setMobileMenuOpen(false)
+
                             }}
-                            className={`px-4 py-2 text-sm font-mono rounded-full transition-all duration-300 w-full lg:w-auto text-center ${activeTab === item.text
+                            className={`px-4 py-2 text-sm font-mono rounded-full transition-all duration-300 cursor-pointer w-full lg:w-auto text-center ${activeTab === item.text
                                     ? "bg-neutral-900 text-white"
                                     : "text-gray-800 hover:text-black"
                                 }`}
                         >
                             {item.text}
-                        </button>
+                        </a>
                     ))}
                 </div>
 

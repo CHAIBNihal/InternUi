@@ -7,9 +7,10 @@ import Nav from './Components/NavBar/Nav'
 import HomePage from './Pages/Home/HomePage'
 import NotFound from './Pages/NotFound/NotFound'
 import WebPage from './Pages/PageWeb/WebPage'
+import Sprints from './Pages/Sprints/Sprints'
 
 function App() {
-  const [isLogged, setisLogged] = useState(false)
+  const [isLogged, setisLogged] = useState(true)
 
   return (
     <div>
@@ -23,7 +24,7 @@ function App() {
             <Nav />
             <Routes>
               <Route path="/accueil" element={<HomePage />} />
-          
+              <Route path='/Sprints' element={<Sprints />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

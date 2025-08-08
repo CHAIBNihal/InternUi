@@ -8,7 +8,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
+} from "../../components/ui/table"
 import { invoices } from '@/Constants/Menu'
 import ModernDigitalClock from '../RightSideContent/ModernDigitalClock'
 import NewRequests from '../RightSideContent/NewRequests'
