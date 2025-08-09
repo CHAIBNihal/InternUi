@@ -8,15 +8,15 @@ export const menuList = [
         text: "Sprints"
     },
     {
-        link : "",
+        link : "/Stagiaires",
         text: "Stagiaires"
     },
     {
-        link : "",
+        link : "/nouveaux-demandes",
         text : "Nouveaux Demandes"
     },
     {
-        link : "",
+        link : "/demandes-accepter",
         text : "Demandes Accépter"
     },
    

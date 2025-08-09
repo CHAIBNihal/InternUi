@@ -7,7 +7,9 @@ import Nav from './Components/NavBar/Nav'
 import HomePage from './Pages/Home/HomePage'
 import NotFound from './Pages/NotFound/NotFound'
 import WebPage from './Pages/PageWeb/WebPage'
-import Sprints from './Pages/Sprints/Sprints'
+import Sprints from './Pages/Sprints/Sprint'
+import Stagiaires from './Pages/Stagiaires/Stagiaires'
+import NouveauxDemandes from './Pages/NouveauxDemandes/NouveauxDemandes'
 
 function App() {
   const [isLogged, setisLogged] = useState(true)
@@ -25,13 +27,15 @@ function App() {
             <Routes>
               <Route path="/accueil" element={<HomePage />} />
               <Route path='/Sprints' element={<Sprints />} />
+              <Route path='/Stagiaires' element={<Stagiaires/>} />
               <Route path="*" element={<NotFound />} />
+              <Route path='/nouveaux-demandes' element={<NouveauxDemandes/>} />
             </Routes>
           </div>
         </>
       ) : (
-        // ✅ Ici, on ouvre une parenthèse correctement
-        <div className="contenu">
+    
+        <div className="contenu overflow-y-auto">
           <Routes>
             <Route path="/" element={<WebPage />} />
             <Route path="*" element={<NotFound />} />

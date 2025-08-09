@@ -15,7 +15,7 @@ import NewRequests from '../RightSideContent/NewRequests'
 
 const GlobalContent = () => {
     return (
-        <div className='mt-10 px-4'>
+        <div className='mt-10 px-4 h-screen overflow-y-auto'>
             <div className="grid lg:grid-cols-3 gap-4 pr-6">
 
                 {/* Carte image avec overlay */}
