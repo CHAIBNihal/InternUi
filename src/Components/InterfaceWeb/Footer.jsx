@@ -33,7 +33,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className='bg-indigo-950 text-white'>
+    <footer className='bg-indigo-950 rounded-4xl text-white'>
       <div className='container mx-auto px-6 py-12'>
         {/* Top Section */}
         <div className='border-b border-indigo-800 pb-8'>
