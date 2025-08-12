@@ -18,7 +18,16 @@ import {
 const BodySprints = ({ project }) => {
   return (
     <div className="h-screen overflow-y-auto w-full p-4">
-      {/* Badge aligné à droite */}
+    
+
+      {/* Si aucun projet sélectionné */}
+      {!project ? (
+        <div className="mt-7 lg:ml-72 text-gray-500">
+          Sélectionnez un projet pour voir ses Sprints
+        </div>
+      ) : (
+        <section>
+            {/* Badge aligné à droite */}
       <div className="flex justify-end mt-8">
         <div className="flex gap-x-4">
           <Button className={"flex gap-x-2 bg-orange-500"}>
@@ -31,14 +40,7 @@ const BodySprints = ({ project }) => {
 
         </div>
       </div>
-
-      {/* Si aucun projet sélectionné */}
-      {!project ? (
-        <div className="mt-7 lg:ml-72 text-gray-500">
-          Sélectionnez un projet pour voir ses Sprints
-        </div>
-      ) : (
-        <div className="mt-7 lg:ml-72 space-y-3">
+          <div className="mt-7 lg:ml-72 space-y-3">
           {project.SprintStatus.map((sp, i) => (
             <Accordion
               key={i}
@@ -97,6 +99,8 @@ const BodySprints = ({ project }) => {
             </Accordion>
           ))}
         </div>
+        </section>
+        
       )}
     </div>
   );

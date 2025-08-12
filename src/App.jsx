@@ -10,9 +10,12 @@ import WebPage from './Pages/PageWeb/WebPage'
 import Sprints from './Pages/Sprints/Sprint'
 import Stagiaires from './Pages/Stagiaires/Stagiaires'
 import NouveauxDemandes from './Pages/NouveauxDemandes/NouveauxDemandes'
+import Demande from './Pages/Demande/Demande'
+import AdminEspace from './Components/InterfaceWeb/AdminEspace'
 
 function App() {
-  const [isLogged, setisLogged] = useState(true)
+  const [isLogged, setisLogged] = useState(false)
+
 
   return (
     <div>
@@ -38,6 +41,8 @@ function App() {
         <div className="contenu overflow-y-auto">
           <Routes>
             <Route path="/" element={<WebPage />} />
+            <Route path='/form-demande' element={<Demande />} />
+            <Route path='/espace-administrateur' element={<AdminEspace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

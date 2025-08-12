@@ -1,6 +1,7 @@
 import { LogIn, UserPlus, UserRoundCog, Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import SRM from "../../assets/Dashboard/SRM.png";
+import { LoginBtn } from "./LoginBtn";
 
 const WebNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const WebNav = () => {
         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
           {/* Espace Administrateur */}
           <a
-            href="#"
+            href="/espace-administrateur"
             className="relative flex font-semibold gap-x-1 items-center group text-cyan-600 text-sm md:text-base"
           >
             <UserRoundCog size={19} />
@@ -25,17 +26,12 @@ const WebNav = () => {
           </a>
 
           {/* Se connecter */}
-          <a
-            className="font-semibold hover:bg-white hover:text-black p-2 md:p-4 rounded-2xl flex gap-x-1 items-center text-sm md:text-base"
-            href="#"
-          >
-            <LogIn size={16} className="md:size-[19px]" />
-            Se connecter
-          </a>
+         <LoginBtn />
+
 
           {/* Faire une demande */}
           <a
-            href="#"
+            href="/form-demande"
             className="font-semibold hover:bg-white hover:text-black p-2 md:p-4 rounded-2xl flex gap-x-1 items-center text-sm md:text-base"
           >
             <UserPlus size={16} className="md:size-[19px]" />
